@@ -1,0 +1,167 @@
+id = "gost-21-302-2013-basic"
+name_ru = "ГОСТ 21.302-2013 (базовый)"
+version = "1.0.1"
+dpi_print = 300
+tick_major_mm = 5.0
+tick_minor_mm = 1.0
+
+[legend]
+sample_w_mm = 20.0
+sample_h_mm = 10.0
+order = ["песок","супесь","суглинок","глина","песчаник","известняк","гравий","галька","мергель","алевролит","доломит"]
+
+[mapping]
+"песок" = "sand_medium"
+"супесь" = "sandy_loam"
+"суглинок" = "loam_default"
+"глина" = "clay_dense"
+"песчаник" = "sandstone_default"
+"известняк" = "limestone_default"
+"гравий" = "gravel_coarse"
+"галька" = "gravel_coarse"
+"мергель" = "marl_default"
+"алевролит" = "siltstone_default"
+"доломит" = "dolomite_default"
+
+[synonyms]
+"галечник" = "галька"
+"sand" = "песок"
+"loam" = "суглинок"
+"siltstone" = "алевролит"
+"marl" = "мергель"
+"dolomite" = "доломит"
+"clay" = "глина"
+"limestone" = "известняк"
+"sandstone" = "песчаник"
+"gravel" = "гравий"
+"pebble" = "галька"
+"pebbles" = "галька"
+
+[default_colors]
+"песок" = "#e8d8a0"
+"супесь" = "#ead1b0"
+"суглинок" = "#cfae82"
+"глина" = "#b88a6a"
+"песчаник" = "#dbc5a3"
+"известняк" = "#d7dfd1"
+"гравий" = "#a8a8a8"
+"галька" = "#b4b4b4"
+"мергель" = "#d5d5b9"
+"алевролит" = "#d0c6b4"
+"доломит" = "#d6e1d6"
+
+[[patterns]]
+id = "sand_medium"
+description_ru = "Песок"
+[[patterns.layers]]
+type = "stroke"
+angle_deg = 90
+step_mm = 1.2
+thickness_mm = 0.20
+
+[[patterns]]
+id = "sandy_loam"
+description_ru = "Супесь"
+[[patterns.layers]]
+type = "stroke"
+angle_deg = 90
+step_mm = 2.4
+thickness_mm = 0.20
+[[patterns.layers]]
+type = "dots"
+step_x_mm = 4.0
+step_y_mm = 4.0
+radius_mm = 0.20
+stagger = true
+
+[[patterns]]
+id = "loam_default"
+description_ru = "Суглинок"
+[[patterns.layers]]
+type = "stroke"
+angle_deg = 90
+step_mm = 2.0
+thickness_mm = 0.22
+[[patterns.layers]]
+type = "stroke"
+angle_deg = 0
+step_mm = 8.0
+thickness_mm = 0.20
+
+[[patterns]]
+id = "clay_dense"
+description_ru = "Глина"
+[[patterns.layers]]
+type = "stroke"
+angle_deg = 0
+step_mm = 1.2
+thickness_mm = 0.20
+
+[[patterns]]
+id = "sandstone_default"
+description_ru = "Песчаник"
+[[patterns.layers]]
+type = "cross_stroke"
+angle1_deg = 45
+angle2_deg = 135
+step_mm = 2.2
+thickness_mm = 0.20
+
+[[patterns]]
+id = "limestone_default"
+description_ru = "Известняк"
+[[patterns.layers]]
+type = "cross_stroke"
+angle1_deg = 45
+angle2_deg = 135
+step_mm = 2.4
+thickness_mm = 0.20
+
+[[patterns]]
+id = "gravel_coarse"
+description_ru = "Гравий/галька"
+[[patterns.layers]]
+type = "cross_stroke"
+angle1_deg = 45
+angle2_deg = 135
+step_mm = 3.2
+thickness_mm = 0.20
+
+[[patterns]]
+id = "marl_default"
+description_ru = "Мергель"
+[[patterns.layers]]
+type = "cross_stroke"
+angle1_deg = 0
+angle2_deg = 90
+step_mm = 2.0
+thickness_mm = 0.18
+
+[[patterns]]
+id = "siltstone_default"
+description_ru = "Алевролит"
+[[patterns.layers]]
+type = "stroke"
+angle_deg = 45
+step_mm = 1.8
+thickness_mm = 0.20
+[[patterns.layers]]
+type = "stroke"
+angle_deg = 135
+step_mm = 3.6
+thickness_mm = 0.20
+
+[[patterns]]
+id = "dolomite_default"
+description_ru = "Доломит"
+[[patterns.layers]]
+type = "cross_stroke"
+angle1_deg = 0
+angle2_deg = 90
+step_mm = 2.5
+thickness_mm = 0.22
+
+[export]
+default_dpi = 300
+padding_mm = 3.0
+transparent_background = false
