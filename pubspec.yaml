@@ -1,0 +1,31 @@
+name: strat_column_builder
+description: Stratigraphic Column Builder (ГОСТ 21.302-2013)
+publish_to: "none"
+environment:
+    sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+    flutter:
+        sdk: flutter
+    flutter_localizations:
+        sdk: flutter
+    hooks_riverpod: ^2.5.1
+    csv: ^6.0.0
+    file_selector: ^1.0.3
+    intl: ^0.20.2
+    toml: ^0.13.1
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^3.0.2
+
+flutter:
+    uses-material-design: true
+    assets:
+        - assets/gost-21-302-2013-basic.toml
+    fonts:
+        - family: GOST_Type_A
+          fonts:
+            - asset: assets/fonts/GOST-Type-A.ttf
+
